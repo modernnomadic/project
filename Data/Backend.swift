@@ -7,18 +7,13 @@ class Backend {
     
     private var _BASE_REF = Firebase(url: "\(BASE_URL)")
     private var _motionValues_REF = Firebase(url: "\(BASE_URL)/valuesParent")
-    private var _JOKE_REF = Firebase(url: "\(BASE_URL)/jokes")
+
     
     var BASE_REF: Firebase {
         return _BASE_REF
     }
     
     var motionValues_REF: Firebase {
-        
-        
-        
-        
-        
         
         return _motionValues_REF
     }

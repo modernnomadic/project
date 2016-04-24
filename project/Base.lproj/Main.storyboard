@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Item 2-->
@@ -86,7 +87,7 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="project" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -187,13 +188,50 @@
                     <view key="view" contentMode="scaleToFill" id="yFH-AP-xIj">
                         <rect key="frame" x="0.0" y="64" width="375" height="554"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xni-Ir-B1e">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="accelerometer" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i8d-lf-b6K">
+                                        <rect key="frame" x="16" y="20" width="111" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6p3-WX-9Bk" customClass="GraphView" customModule="project" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="49" width="379" height="112"/>
+                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="112" id="r2L-y4-Jcb"/>
+                                            <constraint firstAttribute="width" constant="383" id="rYF-90-6A2"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="6p3-WX-9Bk" firstAttribute="top" secondItem="i8d-lf-b6K" secondAttribute="bottom" constant="8" id="5fP-aV-nXM"/>
+                                    <constraint firstItem="6p3-WX-9Bk" firstAttribute="leading" secondItem="xni-Ir-B1e" secondAttribute="leadingMargin" constant="-20" id="lW2-zd-74C"/>
+                                    <constraint firstItem="i8d-lf-b6K" firstAttribute="top" secondItem="xni-Ir-B1e" secondAttribute="top" constant="20" id="nNY-dN-lxn"/>
+                                    <constraint firstAttribute="leadingMargin" secondItem="i8d-lf-b6K" secondAttribute="leading" id="pLP-D0-A3E"/>
+                                    <constraint firstAttribute="trailingMargin" secondItem="6p3-WX-9Bk" secondAttribute="trailing" constant="-20" id="pxZ-fb-UPo"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="xni-Ir-B1e" secondAttribute="bottom" constant="-113" id="Th0-Pm-o7y"/>
+                            <constraint firstItem="xni-Ir-B1e" firstAttribute="top" secondItem="oxn-Ar-2dL" secondAttribute="bottom" id="Zg1-Rv-bLJ"/>
+                            <constraint firstItem="xni-Ir-B1e" firstAttribute="leading" secondItem="yFH-AP-xIj" secondAttribute="leading" id="cPc-Bs-3vW"/>
+                        </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="graphView" destination="6p3-WX-9Bk" id="whR-Us-scg"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JL8-gU-Afd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="922" y="-1832"/>
+            <point key="canvasLocation" x="921.5" y="-1832.5"/>
         </scene>
     </scenes>
     <resources>

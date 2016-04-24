@@ -17,6 +17,13 @@
 		7E96EF5A1CCBC46E00B13B5F /* Backend.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E96EF591CCBC46E00B13B5F /* Backend.swift */; };
 		7E96EF5D1CCBC49D00B13B5F /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E96EF5C1CCBC49D00B13B5F /* Constants.swift */; };
 		7E96EF601CCBC76000B13B5F /* MotionKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E96EF5F1CCBC76000B13B5F /* MotionKit.swift */; };
+		7EB2EFA51CCD067700320CB6 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7EB2EFA41CCD067700320CB6 /* QuartzCore.framework */; };
+		7EB2EFA71CCD069700320CB6 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7EB2EFA61CCD069700320CB6 /* CoreGraphics.framework */; };
+		7EB2EFA91CCD06AC00320CB6 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7EB2EFA81CCD06AC00320CB6 /* UIKit.framework */; };
+		7EB2EFAB1CCD06C300320CB6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7EB2EFAA1CCD06C300320CB6 /* Foundation.framework */; };
+		7EB2EFBA1CCD3E6A00320CB6 /* AccelerometerGraphViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EB2EFB71CCD3E6A00320CB6 /* AccelerometerGraphViewController.swift */; };
+		7EB2EFBB1CCD3E6A00320CB6 /* GraphView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EB2EFB81CCD3E6A00320CB6 /* GraphView.swift */; };
+		7EB2EFBC1CCD3E6A00320CB6 /* GraphViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EB2EFB91CCD3E6A00320CB6 /* GraphViewController.swift */; };
 		EDCCF3C591985DA30AF8A20A /* Pods_project.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 85317DFDB23BF0A46EB8348E /* Pods_project.framework */; };
 /* End PBXBuildFile section */
 
@@ -46,6 +53,14 @@
 		7E96EF591CCBC46E00B13B5F /* Backend.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Backend.swift; sourceTree = "<group>"; };
 		7E96EF5C1CCBC49D00B13B5F /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		7E96EF5F1CCBC76000B13B5F /* MotionKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MotionKit.swift; sourceTree = "<group>"; };
+		7EB2EFA41CCD067700320CB6 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		7EB2EFA61CCD069700320CB6 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		7EB2EFA81CCD06AC00320CB6 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		7EB2EFAA1CCD06C300320CB6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		7EB2EFB41CCD2B4500320CB6 /* Firebase.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Firebase.framework; path = "../../../Library/Developer/Xcode/DerivedData/project-dadrhledofebtqgsxkludzfxkevi/Build/Products/Debug-iphonesimulator/Firebase.framework"; sourceTree = "<group>"; };
+		7EB2EFB71CCD3E6A00320CB6 /* AccelerometerGraphViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccelerometerGraphViewController.swift; sourceTree = SOURCE_ROOT; };
+		7EB2EFB81CCD3E6A00320CB6 /* GraphView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GraphView.swift; sourceTree = SOURCE_ROOT; };
+		7EB2EFB91CCD3E6A00320CB6 /* GraphViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GraphViewController.swift; sourceTree = SOURCE_ROOT; };
 		85317DFDB23BF0A46EB8348E /* Pods_project.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_project.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F8C28F67252C7B46A9945EB /* Pods-project.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-project.debug.xcconfig"; path = "Pods/Target Support Files/Pods-project/Pods-project.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -55,6 +70,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7EB2EFAB1CCD06C300320CB6 /* Foundation.framework in Frameworks */,
+				7EB2EFA91CCD06AC00320CB6 /* UIKit.framework in Frameworks */,
+				7EB2EFA71CCD069700320CB6 /* CoreGraphics.framework in Frameworks */,
+				7EB2EFA51CCD067700320CB6 /* QuartzCore.framework in Frameworks */,
 				EDCCF3C591985DA30AF8A20A /* Pods_project.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -75,11 +94,11 @@
 				7E51E6861CC596F300BD020B /* project */,
 				7E96EF551CCBC01900B13B5F /* MainView */,
 				7E96EF541CCBBFEB00B13B5F /* Controller */,
-				7E96EF5E1CCBC76000B13B5F /* Additional */,
 				7E96EF5B1CCBC49000B13B5F /* Constants */,
 				7E96EF581CCBC46E00B13B5F /* Data */,
 				7E51E69B1CC596F300BD020B /* projectTests */,
 				7E51E6851CC596F300BD020B /* Products */,
+				7E96EF5E1CCBC76000B13B5F /* Supported */,
 				8777D1943A0CA1D046DDA1CF /* Pods */,
 				F628E597C5F50DFF98AE840F /* Frameworks */,
 			);
@@ -118,6 +137,9 @@
 		7E96EF541CCBBFEB00B13B5F /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				7EB2EFB71CCD3E6A00320CB6 /* AccelerometerGraphViewController.swift */,
+				7EB2EFB81CCD3E6A00320CB6 /* GraphView.swift */,
+				7EB2EFB91CCD3E6A00320CB6 /* GraphViewController.swift */,
 				7E96EF511CCBBF4F00B13B5F /* CrowdController.swift */,
 			);
 			path = Controller;
@@ -147,11 +169,12 @@
 			path = Constants;
 			sourceTree = "<group>";
 		};
-		7E96EF5E1CCBC76000B13B5F /* Additional */ = {
+		7E96EF5E1CCBC76000B13B5F /* Supported */ = {
 			isa = PBXGroup;
 			children = (
 				7E96EF5F1CCBC76000B13B5F /* MotionKit.swift */,
 			);
+			name = Supported;
 			path = Additional;
 			sourceTree = "<group>";
 		};
@@ -167,6 +190,11 @@
 		F628E597C5F50DFF98AE840F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				7EB2EFB41CCD2B4500320CB6 /* Firebase.framework */,
+				7EB2EFAA1CCD06C300320CB6 /* Foundation.framework */,
+				7EB2EFA81CCD06AC00320CB6 /* UIKit.framework */,
+				7EB2EFA61CCD069700320CB6 /* CoreGraphics.framework */,
+				7EB2EFA41CCD067700320CB6 /* QuartzCore.framework */,
 				85317DFDB23BF0A46EB8348E /* Pods_project.framework */,
 			);
 			name = Frameworks;
@@ -219,7 +247,7 @@
 		7E51E67C1CC596F300BD020B /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0720;
+				LastSwiftUpdateCheck = 0730;
 				LastUpgradeCheck = 0720;
 				ORGANIZATIONNAME = "Amarbayasgalan Batbaatar";
 				TargetAttributes = {
@@ -325,12 +353,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7EB2EFBC1CCD3E6A00320CB6 /* GraphViewController.swift in Sources */,
 				7E51E68A1CC596F300BD020B /* ViewController.swift in Sources */,
 				7E96EF5A1CCBC46E00B13B5F /* Backend.swift in Sources */,
 				7E51E6881CC596F300BD020B /* AppDelegate.swift in Sources */,
 				7E96EF601CCBC76000B13B5F /* MotionKit.swift in Sources */,
 				7E96EF521CCBBF4F00B13B5F /* CrowdController.swift in Sources */,
+				7EB2EFBA1CCD3E6A00320CB6 /* AccelerometerGraphViewController.swift in Sources */,
 				7E96EF5D1CCBC49D00B13B5F /* Constants.swift in Sources */,
+				7EB2EFBB1CCD3E6A00320CB6 /* GraphView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -460,8 +491,10 @@
 			baseConfigurationReference = 9F8C28F67252C7B46A9945EB /* Pods-project.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = "";
 				INFOPLIST_FILE = project/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -469,6 +502,8 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos;
+				SWIFT_OBJC_BRIDGING_HEADER = "";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
@@ -478,8 +513,10 @@
 			baseConfigurationReference = 07A32FCADCE2A76CC81210A3 /* Pods-project.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = "";
 				INFOPLIST_FILE = project/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -487,6 +524,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos;
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
