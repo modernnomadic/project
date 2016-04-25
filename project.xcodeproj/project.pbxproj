@@ -21,9 +21,7 @@
 		7EB2EFA71CCD069700320CB6 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7EB2EFA61CCD069700320CB6 /* CoreGraphics.framework */; };
 		7EB2EFA91CCD06AC00320CB6 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7EB2EFA81CCD06AC00320CB6 /* UIKit.framework */; };
 		7EB2EFAB1CCD06C300320CB6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7EB2EFAA1CCD06C300320CB6 /* Foundation.framework */; };
-		7EB2EFBA1CCD3E6A00320CB6 /* AccelerometerGraphViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EB2EFB71CCD3E6A00320CB6 /* AccelerometerGraphViewController.swift */; };
 		7EB2EFBB1CCD3E6A00320CB6 /* GraphView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EB2EFB81CCD3E6A00320CB6 /* GraphView.swift */; };
-		7EB2EFBC1CCD3E6A00320CB6 /* GraphViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EB2EFB91CCD3E6A00320CB6 /* GraphViewController.swift */; };
 		EDCCF3C591985DA30AF8A20A /* Pods_project.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 85317DFDB23BF0A46EB8348E /* Pods_project.framework */; };
 /* End PBXBuildFile section */
 
@@ -58,9 +56,7 @@
 		7EB2EFA81CCD06AC00320CB6 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		7EB2EFAA1CCD06C300320CB6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		7EB2EFB41CCD2B4500320CB6 /* Firebase.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Firebase.framework; path = "../../../Library/Developer/Xcode/DerivedData/project-dadrhledofebtqgsxkludzfxkevi/Build/Products/Debug-iphonesimulator/Firebase.framework"; sourceTree = "<group>"; };
-		7EB2EFB71CCD3E6A00320CB6 /* AccelerometerGraphViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccelerometerGraphViewController.swift; sourceTree = SOURCE_ROOT; };
 		7EB2EFB81CCD3E6A00320CB6 /* GraphView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GraphView.swift; sourceTree = SOURCE_ROOT; };
-		7EB2EFB91CCD3E6A00320CB6 /* GraphViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GraphViewController.swift; sourceTree = SOURCE_ROOT; };
 		85317DFDB23BF0A46EB8348E /* Pods_project.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_project.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F8C28F67252C7B46A9945EB /* Pods-project.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-project.debug.xcconfig"; path = "Pods/Target Support Files/Pods-project/Pods-project.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -137,9 +133,7 @@
 		7E96EF541CCBBFEB00B13B5F /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				7EB2EFB71CCD3E6A00320CB6 /* AccelerometerGraphViewController.swift */,
 				7EB2EFB81CCD3E6A00320CB6 /* GraphView.swift */,
-				7EB2EFB91CCD3E6A00320CB6 /* GraphViewController.swift */,
 				7E96EF511CCBBF4F00B13B5F /* CrowdController.swift */,
 			);
 			path = Controller;
@@ -353,13 +347,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7EB2EFBC1CCD3E6A00320CB6 /* GraphViewController.swift in Sources */,
 				7E51E68A1CC596F300BD020B /* ViewController.swift in Sources */,
 				7E96EF5A1CCBC46E00B13B5F /* Backend.swift in Sources */,
 				7E51E6881CC596F300BD020B /* AppDelegate.swift in Sources */,
 				7E96EF601CCBC76000B13B5F /* MotionKit.swift in Sources */,
 				7E96EF521CCBBF4F00B13B5F /* CrowdController.swift in Sources */,
-				7EB2EFBA1CCD3E6A00320CB6 /* AccelerometerGraphViewController.swift in Sources */,
 				7E96EF5D1CCBC49D00B13B5F /* Constants.swift in Sources */,
 				7EB2EFBB1CCD3E6A00320CB6 /* GraphView.swift in Sources */,
 			);

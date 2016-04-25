@@ -111,36 +111,89 @@ class CrowdController: UIViewController {
             
             let path =  "values" + "/\(uniqueIdentifier)"
             let values_REF = self.backendCrowd.motionValues_REF.childByAppendingPath(path)
-            
-            
-            //let values_REFz = values_REF.childByAutoId()
-            
-            // - valueParents
-            //   - device1
-            //      - x
-            //      - y
-            //      - z
-            //   - device2
-            //      - x
-            
+
             let valuesList1 = ["xValue" : x , "yValue":y, "zValue": z]
-            //let valuesList1REF = values_REF.childByAutoId()
-            values_REF.updateChildValues(valuesList1)
             
-          //  let values_REF1 = self.backendCrowd.motionValues_REF.childByAppendingPath("values2")
-          //  let valuesList2 = ["xValue" : x , "yValue":y, "zValue": z]
-          //  let valuesList2REF = values_REF.childByAutoId()
-          //  valuesList2REF.updateChildValues(valuesList2)
-       
+            values_REF.updateChildValues(valuesList1)
+
             
             //Interval is in seconds. And now you have got the x, y and z values here
         }
         
     }
+    
     @IBAction func stopDetector(sender: UIButton) {
-        
-        
         motionKit.stopAccelerometerUpdates()
         
     }
+    func moodCounter() -> Int{
+        struct Holder {
+            static var timesCalled = 0
+        }
+        Holder.timesCalled += 1
+        return Holder.timesCalled
+        
+    }
+   /* @IBAction func happyButton(sender: UIButton){
+        let happy_state = 0
+    
+    var uniqueIdentifier: String
+    let userDefaults = NSUserDefaults.standardUserDefaults()
+    
+    if let identifier = userDefaults.stringForKey("identifier") {
+        uniqueIdentifier = identifier
+    }
+    else {
+    uniqueIdentifier = self.backendCrowd.moodValues_REF.childByAutoId().key
+    userDefaults.setValue(uniqueIdentifier, forKey: "identifier")
+    userDefaults.synchronize()
+        
+        let path = "happyValue" + "/\(uniqueIdentifier)"
+        let happyValues_REF = self.backendCrowd.moodValues_REF.childByAppendingPath(path)
+        
+        let happy_count =  ["count":happy_state]
+        happyValues_REF.updateChildValues(happy_count)
+           self.happyShow.text = "\(happy_state)"
+        }
+    }*/
+    @IBAction func moodButton(sender: UIButton) {
+        var uniqueIdentifier: String
+        let userDefaults = NSUserDefaults.standardUserDefaults()
+        
+        if let identifier = userDefaults.stringForKey("identifier") {
+            uniqueIdentifier = identifier
+        }
+        else {
+            uniqueIdentifier = self.backendCrowd.moodValues_REF.childByAutoId().key
+            userDefaults.setValue(uniqueIdentifier, forKey: "identifier")
+            userDefaults.synchronize()
+        
+        let propertyToCheck = sender.currentTitle!
+        switch propertyToCheck {
+        case "Happy" :
+            let path = "happyValue" + "/\(uniqueIdentifier)"
+            let happyValues_REF = self.backendCrowd.moodValues_REF.childByAppendingPath(path)
+           
+            let happy_count =  ["count": 1]
+            happyValues_REF.updateChildValues(happy_count)
+            print(happy_count)
+         
+        // do something
+    //    case "Sad" :
+        // do something else
+    
+        //case "Energetic" :
+            
+            
+      //  case "Calm":
+            
+            
+        default: break
+    }
+    }
+    }
+    @IBOutlet weak var happyShow: UILabel!
+    
+    
+    
 }

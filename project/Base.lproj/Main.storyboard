@@ -132,37 +132,102 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e09-P5-182">
-                                <rect key="frame" x="47" y="345" width="30" height="30"/>
+                                <rect key="frame" x="81" y="390" width="65" height="47"/>
+                                <color key="backgroundColor" red="0.93507207979999996" green="0.45942292130000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="Run"/>
                                 <connections>
                                     <action selector="invokeDetector:" destination="tAo-Rd-pcq" eventType="touchUpInside" id="AqZ-SE-52R"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="tes 2" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="80i-MQ-zxd">
-                                <rect key="frame" x="37" y="132" width="118" height="55"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="test1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UPe-Tg-vDj">
-                                <rect key="frame" x="242" y="115" width="128" height="57"/>
+                                <rect key="frame" x="28" y="309" width="49" height="55"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uai-YK-zHt">
-                                <rect key="frame" x="164" y="345" width="32" height="30"/>
+                                <rect key="frame" x="235" y="388" width="53" height="48.5"/>
+                                <color key="backgroundColor" red="0.0" green="1" blue="0.54563037339999998" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="Stop"/>
                                 <connections>
                                     <action selector="stopDetector:" destination="tAo-Rd-pcq" eventType="touchUpInside" id="V3l-W1-WG8"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="test 4" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U2O-Fu-Z5q">
-                                <rect key="frame" x="138" y="120" width="119" height="67"/>
+                                <rect key="frame" x="106" y="321" width="54" height="49"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fm6-zb-AY6">
+                                <rect key="frame" x="0.0" y="134" width="190" height="130"/>
+                                <color key="backgroundColor" red="0.94109605419999998" green="1" blue="0.78796903220000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="Didot" family="Didot" pointSize="24"/>
+                                <state key="normal" title="Calm">
+                                    <color key="titleColor" red="0.90588235294117647" green="0.32941176470588235" blue="0.99607843137254903" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="moodButton:" destination="tAo-Rd-pcq" eventType="touchUpInside" id="bj4-8x-sBU"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1ew-bE-4Ih">
+                                <rect key="frame" x="189" y="-1" width="190" height="136"/>
+                                <color key="backgroundColor" red="0.70719319544911596" green="0.92516025641025645" blue="0.88398745163018222" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="Didot" family="Didot" pointSize="24"/>
+                                <state key="normal" title="Happy">
+                                    <color key="titleColor" red="0.72758548903773734" green="0.68300737080124441" blue="0.92516025641025645" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="moodButton:" destination="tAo-Rd-pcq" eventType="touchUpInside" id="dQk-fl-g0j"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LSs-7L-3CX">
+                                <rect key="frame" x="189" y="134" width="190" height="130"/>
+                                <color key="backgroundColor" red="0.88699919871794874" green="0.75301939554431052" blue="0.51873433600451135" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="Didot" family="Didot" pointSize="24"/>
+                                <state key="normal" title="Sad">
+                                    <color key="titleColor" red="0.67840544871794872" green="0.13915654866093496" blue="0.062151120811848828" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="moodButton:" destination="tAo-Rd-pcq" eventType="touchUpInside" id="PYc-P0-gcu"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Happy" translatesAutoresizingMaskIntoConstraints="NO" id="EA1-Qq-JOZ">
+                                <rect key="frame" x="244" y="27" width="80" height="80"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Calm" translatesAutoresizingMaskIntoConstraints="NO" id="lUG-5O-hFJ">
+                                <rect key="frame" x="55" y="159" width="80" height="80"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Sad" translatesAutoresizingMaskIntoConstraints="NO" id="RDO-O1-odw">
+                                <rect key="frame" x="244" y="159" width="80" height="80"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Energetic" translatesAutoresizingMaskIntoConstraints="NO" id="Vvj-fw-29C">
+                                <rect key="frame" x="55" y="27" width="80" height="80"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="test1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UPe-Tg-vDj">
+                                <rect key="frame" x="177" y="321" width="71" height="49"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jr3-uB-ml5">
+                                <rect key="frame" x="156" y="292" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B2F-AS-bgE">
+                                <rect key="frame" x="0.0" y="0.0" width="190" height="136"/>
+                                <color key="backgroundColor" red="0.93507207979999996" green="0.45942292130000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="Didot" family="Didot" pointSize="24"/>
+                                <inset key="contentEdgeInsets" minX="4" minY="19" maxX="0.0" maxY="5"/>
+                                <state key="normal" title="Energetic">
+                                    <color key="titleColor" red="1" green="0.96475116563351238" blue="0.47946894669455187" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="moodButton:" destination="tAo-Rd-pcq" eventType="touchUpInside" id="GVU-73-IBA"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -171,11 +236,12 @@
                         <outlet property="getResultX" destination="U2O-Fu-Z5q" id="XVJ-JN-2ef"/>
                         <outlet property="getResultY" destination="80i-MQ-zxd" id="27E-qL-jmi"/>
                         <outlet property="getResultZ" destination="UPe-Tg-vDj" id="Sfq-g0-7uk"/>
+                        <outlet property="happyShow" destination="jr3-uB-ml5" id="DYd-pW-cEz"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="32K-aC-MXp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="921.5" y="-891.5"/>
+            <point key="canvasLocation" x="889.5" y="-887.5"/>
         </scene>
         <!--DJ-->
         <scene sceneID="nhb-Bw-xeC">
@@ -235,7 +301,11 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Calm" width="100" height="100"/>
         <image name="Crowd image" width="847" height="1440"/>
         <image name="DJ image" width="454" height="1080"/>
+        <image name="Energetic" width="100" height="100"/>
+        <image name="Happy" width="100" height="100"/>
+        <image name="Sad" width="100" height="100"/>
     </resources>
 </document>
