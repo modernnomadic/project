@@ -10,6 +10,12 @@ import UIKit
 import Foundation
 import Firebase
 
+enum Mood : Int32 {
+    case Energetic = 1
+    case Happy = 2
+    case Calm = 3
+    case Sad = 4
+}
 
 
 class CrowdController: UIViewController {
@@ -17,49 +23,49 @@ class CrowdController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-       /*
-        let values_REF = self.backendCrowd.motionValues_REF.childByAppendingPath("values")
-        
-//        values_REF.observeEventType(.Value, withBlock: { snapshot in
-//            print(snapshot.value)
-//        }
-        
-        var data: NSDictionary?
-        
-     values_REF.observeEventType(.Value, withBlock: { (snapshot) in
-            data = snapshot.value as? NSDictionary
-            
-            var average_x: Double
-            var average_y: Double
-            var average_z: Double
-            
-            var sum_x: Double = 0
-            var sum_y: Double = 0
-            var sum_z: Double = 0
-            let numberOfValues = Double((data?.allValues.count)!)
-            
-            data?.allValues.forEach({ (value) in
-                print(value)
-                let x = value["xValue"] as! Double
-                let y = value["yValue"] as! Double
-                let z = value["zValue"] as! Double
-                
-                sum_x += x
-                sum_y += y
-                sum_z += z
-            })
-            
-            average_x = sum_x/numberOfValues
-            average_y = sum_y/numberOfValues
-            average_z = sum_z/numberOfValues
-            
-            print("x:\(average_x) y:\(average_y)z:\(average_z)")
-  
-            
-            
-        })
-        // Do any additional setup after loading the view, typically from a nib.
-        */
+        /*
+         let values_REF = self.backendCrowd.motionValues_REF.childByAppendingPath("values")
+         
+         //        values_REF.observeEventType(.Value, withBlock: { snapshot in
+         //            print(snapshot.value)
+         //        }
+         
+         var data: NSDictionary?
+         
+         values_REF.observeEventType(.Value, withBlock: { (snapshot) in
+         data = snapshot.value as? NSDictionary
+         
+         var average_x: Double
+         var average_y: Double
+         var average_z: Double
+         
+         var sum_x: Double = 0
+         var sum_y: Double = 0
+         var sum_z: Double = 0
+         let numberOfValues = Double((data?.allValues.count)!)
+         
+         data?.allValues.forEach({ (value) in
+         print(value)
+         let x = value["xValue"] as! Double
+         let y = value["yValue"] as! Double
+         let z = value["zValue"] as! Double
+         
+         sum_x += x
+         sum_y += y
+         sum_z += z
+         })
+         
+         average_x = sum_x/numberOfValues
+         average_y = sum_y/numberOfValues
+         average_z = sum_z/numberOfValues
+         
+         print("x:\(average_x) y:\(average_y)z:\(average_z)")
+         
+         
+         
+         })
+         // Do any additional setup after loading the view, typically from a nib.
+         */
     }
     
     override func didReceiveMemoryWarning() {
@@ -93,7 +99,7 @@ class CrowdController: UIViewController {
                 self.getResultX.text = "\(x)"
                 self.getResultY.text = "\(y)"
                 self.getResultZ.text = "\(z)"
-            
+                
             })
             
             var uniqueIdentifier: String
@@ -111,11 +117,11 @@ class CrowdController: UIViewController {
             
             let path =  "values" + "/\(uniqueIdentifier)"
             let values_REF = self.backendCrowd.motionValues_REF.childByAppendingPath(path)
-
+            
             let valuesList1 = ["xValue" : x , "yValue":y, "zValue": z]
             
             values_REF.updateChildValues(valuesList1)
-
+            
             
             //Interval is in seconds. And now you have got the x, y and z values here
         }
@@ -134,31 +140,55 @@ class CrowdController: UIViewController {
         return Holder.timesCalled
         
     }
-   /* @IBAction func happyButton(sender: UIButton){
-        let happy_state = 0
-    
-    var uniqueIdentifier: String
-    let userDefaults = NSUserDefaults.standardUserDefaults()
-    
-    if let identifier = userDefaults.stringForKey("identifier") {
-        uniqueIdentifier = identifier
-    }
-    else {
-    uniqueIdentifier = self.backendCrowd.moodValues_REF.childByAutoId().key
-    userDefaults.setValue(uniqueIdentifier, forKey: "identifier")
-    userDefaults.synchronize()
-        
-        let path = "happyValue" + "/\(uniqueIdentifier)"
-        let happyValues_REF = self.backendCrowd.moodValues_REF.childByAppendingPath(path)
-        
-        let happy_count =  ["count":happy_state]
-        happyValues_REF.updateChildValues(happy_count)
-           self.happyShow.text = "\(happy_state)"
+    /* @IBAction func happyButton(sender: UIButton){
+     let happy_state = 0
+     
+     var uniqueIdentifier: String
+     let userDefaults = NSUserDefaults.standardUserDefaults()
+     
+     if let identifier = userDefaults.stringForKey("identifier") {
+     uniqueIdentifier = identifier
+     }
+     else {
+     uniqueIdentifier = self.backendCrowd.moodValues_REF.childByAutoId().key
+     userDefaults.setValue(uniqueIdentifier, forKey: "identifier")
+     userDefaults.synchronize()
+     
+     let path = "happyValue" + "/\(uniqueIdentifier)"
+     let happyValues_REF = self.backendCrowd.moodValues_REF.childByAppendingPath(path)
+     
+     let happy_count =  ["count":happy_state]
+     happyValues_REF.updateChildValues(happy_count)
+     self.happyShow.text = "\(happy_state)"
+     }
+     }*/
+    func getCurValueFromFirebaseValue(firbaseVal: FDataSnapshot?, countPath: String) -> Int32 {
+        var res : Int32 = 0
+        if (nil != firbaseVal) {
+            let myPrevCountValueDic : NSDictionary? = firbaseVal!.value as? NSDictionary
+            if (nil != myPrevCountValueDic) {
+                let prevCountVal_ : NSNumber? = myPrevCountValueDic![countPath] as? NSNumber
+                if (nil != prevCountVal_) {
+                    res = prevCountVal_!.intValue
+                }
+            }
         }
-    }*/
+        return res
+    }
+    func change(countPath: String, increase: Bool) {
+        let countPath_REF = self.backendCrowd.moodValues_REF.childByAppendingPath("count")
+        countPath_REF.observeSingleEventOfType(.Value, withBlock: { (prevCountValObj) in
+            let prevCountVal : Int32 = self.getCurValueFromFirebaseValue(prevCountValObj, countPath: countPath)
+            
+            let newCountVal : NSNumber = NSNumber(int: prevCountVal + ((increase) ? 1 : -1))
+            countPath_REF.updateChildValues([countPath: newCountVal])
+        })
+    }
+
     @IBAction func moodButton(sender: UIButton) {
         var uniqueIdentifier: String
         let userDefaults = NSUserDefaults.standardUserDefaults()
+        
         
         if let identifier = userDefaults.stringForKey("identifier") {
             uniqueIdentifier = identifier
@@ -167,33 +197,64 @@ class CrowdController: UIViewController {
             uniqueIdentifier = self.backendCrowd.moodValues_REF.childByAutoId().key
             userDefaults.setValue(uniqueIdentifier, forKey: "identifier")
             userDefaults.synchronize()
+        }
         
-        let propertyToCheck = sender.currentTitle!
-        switch propertyToCheck {
-        case "Happy" :
-            let path = "happyValue" + "/\(uniqueIdentifier)"
-            let happyValues_REF = self.backendCrowd.moodValues_REF.childByAppendingPath(path)
-           
-            let happy_count =  ["count": 1]
-            happyValues_REF.updateChildValues(happy_count)
-            print(happy_count)
-         
-        // do something
-    //    case "Sad" :
-        // do something else
-    
-        //case "Energetic" :
-            
-            
-      //  case "Calm":
-            
-            
-        default: break
-    }
-    }
+        let moodValue :Mood = Mood(rawValue: Int32(sender.tag))!
+        let path = "moodValue" + "/\(uniqueIdentifier)"
+        let moodValues_REF = self.backendCrowd.moodValues_REF.childByAppendingPath(path)
+
+        moodValues_REF.observeSingleEventOfType(.Value, withBlock: { (prevMoodValueObj) in
+            var prevValue: NSNumber = 0
+            if (nil != prevMoodValueObj) {
+                let myPrevValueDic : NSDictionary? = prevMoodValueObj.value as? NSDictionary
+                if (nil != myPrevValueDic) {
+                    prevValue = myPrevValueDic!["moodValue"] as! NSNumber
+                }
+            }
+
+            let newMoodValNum : NSNumber = NSNumber(int: moodValue.rawValue)
+            moodValues_REF.updateChildValues(["moodValue": newMoodValNum])
+            if (prevValue != newMoodValNum) {
+                // value was updated
+                // here we should updated count
+               
+                if (prevValue.intValue == Mood.Happy.rawValue) {
+                    self.change("countHappy", increase: false)
+                }
+                if (newMoodValNum.intValue == Mood.Happy.rawValue) {
+                    self.change("countHappy", increase: true)
+                }
+                if (prevValue.intValue == Mood.Sad.rawValue) {
+                    self.change("countSad", increase: false)
+                }
+                if (newMoodValNum.intValue == Mood.Sad.rawValue) {
+                    self.change("countSad", increase: true)
+                }
+                if (prevValue.intValue == Mood.Energetic.rawValue) {
+                    self.change("countEnergetic", increase: false)
+                }
+                if (newMoodValNum.intValue == Mood.Energetic.rawValue) {
+                    self.change("countEnergetic", increase: true)
+                }
+                if (prevValue.intValue == Mood.Calm.rawValue) {
+                    self.change("countCalm", increase: false)
+                }
+                if (newMoodValNum.intValue == Mood.Calm.rawValue) {
+                    self.change("countCalm", increase: true)
+                }
+            }
+        })
     }
     @IBOutlet weak var happyShow: UILabel!
-    
-    
-    
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        let countPath_REF = self.backendCrowd.moodValues_REF.childByAppendingPath("count")
+        countPath_REF.observeEventType(.Value, withBlock: { (prevCountValObj) in
+            let cntHappy: Int32 = self.getCurValueFromFirebaseValue(prevCountValObj, countPath: "countHappy")
+            let cntSad: Int32 = self.getCurValueFromFirebaseValue(prevCountValObj, countPath: "countSad")
+            let cntEnergetic: Int32 = self.getCurValueFromFirebaseValue(prevCountValObj, countPath: "countEnergetic")
+            let cntCalm: Int32 = self.getCurValueFromFirebaseValue(prevCountValObj, countPath: "countCalm")
+            self.happyShow.text = NSString(format: "H: %d S: %d E: %d c: %d", cntHappy, cntSad, cntEnergetic, cntCalm) as String
+        })
+    }
 }
