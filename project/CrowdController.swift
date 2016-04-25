@@ -23,49 +23,9 @@ class CrowdController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        /*
-         let values_REF = self.backendCrowd.motionValues_REF.childByAppendingPath("values")
-         
-         //        values_REF.observeEventType(.Value, withBlock: { snapshot in
-         //            print(snapshot.value)
-         //        }
-         
-         var data: NSDictionary?
-         
-         values_REF.observeEventType(.Value, withBlock: { (snapshot) in
-         data = snapshot.value as? NSDictionary
-         
-         var average_x: Double
-         var average_y: Double
-         var average_z: Double
-         
-         var sum_x: Double = 0
-         var sum_y: Double = 0
-         var sum_z: Double = 0
-         let numberOfValues = Double((data?.allValues.count)!)
-         
-         data?.allValues.forEach({ (value) in
-         print(value)
-         let x = value["xValue"] as! Double
-         let y = value["yValue"] as! Double
-         let z = value["zValue"] as! Double
-         
-         sum_x += x
-         sum_y += y
-         sum_z += z
-         })
-         
-         average_x = sum_x/numberOfValues
-         average_y = sum_y/numberOfValues
-         average_z = sum_z/numberOfValues
-         
-         print("x:\(average_x) y:\(average_y)z:\(average_z)")
-         
-         
-         
-         })
+
          // Do any additional setup after loading the view, typically from a nib.
-         */
+      
     }
     
     override func didReceiveMemoryWarning() {
@@ -88,9 +48,7 @@ class CrowdController: UIViewController {
         motionKit.getAccelerometerValues(0.1)
         {
             (x, y, z) in
-            
-            
-            
+
             print(x)
             print(y)
             print(z)
@@ -123,8 +81,8 @@ class CrowdController: UIViewController {
             values_REF.updateChildValues(valuesList1)
             
             
-            //Interval is in seconds. And now you have got the x, y and z values here
-        }
+            //Interval is in seconds. And now you have got the x, y and z values her
+       }
         
     }
     
@@ -132,36 +90,7 @@ class CrowdController: UIViewController {
         motionKit.stopAccelerometerUpdates()
         
     }
-    func moodCounter() -> Int{
-        struct Holder {
-            static var timesCalled = 0
-        }
-        Holder.timesCalled += 1
-        return Holder.timesCalled
-        
-    }
-    /* @IBAction func happyButton(sender: UIButton){
-     let happy_state = 0
-     
-     var uniqueIdentifier: String
-     let userDefaults = NSUserDefaults.standardUserDefaults()
-     
-     if let identifier = userDefaults.stringForKey("identifier") {
-     uniqueIdentifier = identifier
-     }
-     else {
-     uniqueIdentifier = self.backendCrowd.moodValues_REF.childByAutoId().key
-     userDefaults.setValue(uniqueIdentifier, forKey: "identifier")
-     userDefaults.synchronize()
-     
-     let path = "happyValue" + "/\(uniqueIdentifier)"
-     let happyValues_REF = self.backendCrowd.moodValues_REF.childByAppendingPath(path)
-     
-     let happy_count =  ["count":happy_state]
-     happyValues_REF.updateChildValues(happy_count)
-     self.happyShow.text = "\(happy_state)"
-     }
-     }*/
+
     func getCurValueFromFirebaseValue(firbaseVal: FDataSnapshot?, countPath: String) -> Int32 {
         var res : Int32 = 0
         if (nil != firbaseVal) {
@@ -245,7 +174,7 @@ class CrowdController: UIViewController {
             }
         })
     }
-    @IBOutlet weak var happyShow: UILabel!
+    /*@IBOutlet weak var happyShow: UILabel!
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
         let countPath_REF = self.backendCrowd.moodValues_REF.childByAppendingPath("count")
@@ -256,5 +185,5 @@ class CrowdController: UIViewController {
             let cntCalm: Int32 = self.getCurValueFromFirebaseValue(prevCountValObj, countPath: "countCalm")
             self.happyShow.text = NSString(format: "H: %d S: %d E: %d c: %d", cntHappy, cntSad, cntEnergetic, cntCalm) as String
         })
-    }
+    }*/
 }

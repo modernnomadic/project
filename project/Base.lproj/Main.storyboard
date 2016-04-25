@@ -53,7 +53,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                        <color key="barTintColor" red="0.1215686275" green="0.12941176469999999" blue="0.14117647059999999" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="barTintColor" red="0.29803922770000002" green="0.29803922770000002" blue="0.29803922770000002" alpha="1" colorSpace="calibratedRGB"/>
                     </tabBar>
                     <connections>
                         <segue destination="IXe-wa-Cd6" kind="relationship" relationship="viewControllers" id="dEX-nF-eV0"/>
@@ -74,7 +74,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="black" translucent="NO" id="xFJ-Pi-r6j">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="barTintColor" red="0.1215686275" green="0.12941176469999999" blue="0.14117647059999999" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="barTintColor" red="0.29803922770000002" green="0.29803922770000002" blue="0.29803922770000002" alpha="1" colorSpace="calibratedRGB"/>
                     </navigationBar>
                     <connections>
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="e5q-EV-OjM"/>
@@ -97,19 +97,34 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bSE-rS-Nog">
-                                <rect key="frame" x="187" y="0.0" width="188" height="618"/>
-                                <state key="normal" title="Crowd" backgroundImage="Crowd image"/>
+                                <rect key="frame" x="187" y="68" width="188" height="550"/>
+                                <fontDescription key="fontDescription" name="Didot" family="Didot" pointSize="32"/>
+                                <inset key="contentEdgeInsets" minX="0.0" minY="-450" maxX="0.0" maxY="0.0"/>
+                                <state key="normal" title="Crowd" backgroundImage="Crowd image">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
                                 <connections>
                                     <segue destination="tAo-Rd-pcq" kind="show" id="vGK-oq-iWO"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q7r-TJ-lVm">
-                                <rect key="frame" x="0.0" y="0.0" width="187" height="618"/>
-                                <state key="normal" title="Disk Jockey" backgroundImage="DJ image"/>
+                                <rect key="frame" x="0.0" y="68" width="187" height="550"/>
+                                <fontDescription key="fontDescription" name="Didot" family="Didot" pointSize="32"/>
+                                <inset key="contentEdgeInsets" minX="0.0" minY="-450" maxX="0.0" maxY="0.0"/>
+                                <state key="normal" title="Disk Jockey" backgroundImage="DJ image">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
                                 <connections>
                                     <segue destination="Oyx-Qr-Wfu" kind="show" id="WES-oc-jbb"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Who are you?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Dx-n3-uKB">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="70"/>
+                                <color key="backgroundColor" red="0.1215686275" green="0.12941176469999999" blue="0.14117647059999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="Didot" family="Didot" pointSize="29"/>
+                                <color key="textColor" red="0.89411764705882357" green="0.86555947101178488" blue="0.38420048769664161" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
@@ -131,106 +146,141 @@
                         <rect key="frame" x="0.0" y="64" width="375" height="554"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e09-P5-182">
-                                <rect key="frame" x="81" y="390" width="65" height="47"/>
-                                <color key="backgroundColor" red="0.93507207979999996" green="0.45942292130000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <state key="normal" title="Run"/>
-                                <connections>
-                                    <action selector="invokeDetector:" destination="tAo-Rd-pcq" eventType="touchUpInside" id="AqZ-SE-52R"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="tes 2" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="80i-MQ-zxd">
-                                <rect key="frame" x="28" y="309" width="49" height="55"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tpc-2f-o0U">
+                                <rect key="frame" x="0.0" y="-5" width="375" height="559"/>
+                                <color key="backgroundColor" red="0.80000001190000003" green="0.80000001190000003" blue="0.80000001190000003" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uai-YK-zHt">
-                                <rect key="frame" x="235" y="388" width="53" height="48.5"/>
-                                <color key="backgroundColor" red="0.0" green="1" blue="0.54563037339999998" alpha="1" colorSpace="calibratedRGB"/>
-                                <state key="normal" title="Stop"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e09-P5-182">
+                                <rect key="frame" x="56" y="346" width="76" height="76"/>
+                                <state key="normal" image="Run"/>
                                 <connections>
-                                    <action selector="stopDetector:" destination="tAo-Rd-pcq" eventType="touchUpInside" id="V3l-W1-WG8"/>
+                                    <action selector="invokeDetector:" destination="tAo-Rd-pcq" eventType="touchUpInside" id="AqZ-SE-52R"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="test 4" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U2O-Fu-Z5q">
-                                <rect key="frame" x="106" y="321" width="54" height="49"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="80i-MQ-zxd">
+                                <rect key="frame" x="41" y="482" width="86" height="30.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U2O-Fu-Z5q">
+                                <rect key="frame" x="158" y="485" width="73" height="23"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UPe-Tg-vDj">
+                                <rect key="frame" x="283" y="487" width="83" height="22.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" tag="3" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fm6-zb-AY6">
-                                <rect key="frame" x="0.0" y="134" width="190" height="130"/>
-                                <color key="backgroundColor" red="0.94109605419999998" green="1" blue="0.78796903220000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <rect key="frame" x="8" y="167" width="173" height="117"/>
+                                <color key="backgroundColor" red="0.40000000600000002" green="0.80000001190000003" blue="1" alpha="0.71398168103448278" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="Didot" family="Didot" pointSize="24"/>
+                                <inset key="contentEdgeInsets" minX="0.0" minY="0.0" maxX="0.0" maxY="5"/>
                                 <state key="normal" title="Calm">
-                                    <color key="titleColor" red="0.90588235294117647" green="0.32941176470588235" blue="0.99607843137254903" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleColor" red="0.1215686275" green="0.12941176469999999" blue="0.14117647059999999" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="moodButton:" destination="tAo-Rd-pcq" eventType="touchUpInside" id="bj4-8x-sBU"/>
                                 </connections>
                             </button>
                             <button opaque="NO" tag="2" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1ew-bE-4Ih">
-                                <rect key="frame" x="189" y="-1" width="190" height="136"/>
-                                <color key="backgroundColor" red="0.70719319544911596" green="0.92516025641025645" blue="0.88398745163018222" alpha="1" colorSpace="calibratedRGB"/>
+                                <rect key="frame" x="193" y="42" width="173" height="117"/>
+                                <color key="backgroundColor" red="1" green="1" blue="0.40000000600000002" alpha="0.87230603448275867" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="Didot" family="Didot" pointSize="24"/>
+                                <inset key="contentEdgeInsets" minX="0.0" minY="0.0" maxX="0.0" maxY="5"/>
                                 <state key="normal" title="Happy">
-                                    <color key="titleColor" red="0.72758548903773734" green="0.68300737080124441" blue="0.92516025641025645" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleColor" red="0.1215686275" green="0.12941176469999999" blue="0.14117647059999999" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="moodButton:" destination="tAo-Rd-pcq" eventType="touchUpInside" id="dQk-fl-g0j"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" tag="4" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LSs-7L-3CX">
-                                <rect key="frame" x="189" y="134" width="190" height="130"/>
-                                <color key="backgroundColor" red="0.88699919871794874" green="0.75301939554431052" blue="0.51873433600451135" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" name="Didot" family="Didot" pointSize="24"/>
-                                <state key="normal" title="Sad">
-                                    <color key="titleColor" red="0.67840544871794872" green="0.13915654866093496" blue="0.062151120811848828" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="moodButton:" destination="tAo-Rd-pcq" eventType="touchUpInside" id="PYc-P0-gcu"/>
-                                </connections>
-                            </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Happy" translatesAutoresizingMaskIntoConstraints="NO" id="EA1-Qq-JOZ">
-                                <rect key="frame" x="244" y="27" width="80" height="80"/>
+                                <rect key="frame" x="243" y="52" width="72" height="72"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Calm" translatesAutoresizingMaskIntoConstraints="NO" id="lUG-5O-hFJ">
-                                <rect key="frame" x="55" y="159" width="80" height="80"/>
+                                <rect key="frame" x="56" y="175" width="76" height="76"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Sad" translatesAutoresizingMaskIntoConstraints="NO" id="RDO-O1-odw">
-                                <rect key="frame" x="244" y="159" width="80" height="80"/>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Energetic" translatesAutoresizingMaskIntoConstraints="NO" id="Vvj-fw-29C">
-                                <rect key="frame" x="55" y="27" width="80" height="80"/>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="test1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UPe-Tg-vDj">
-                                <rect key="frame" x="177" y="321" width="71" height="49"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B2F-AS-bgE">
-                                <rect key="frame" x="0.0" y="0.0" width="190" height="136"/>
-                                <color key="backgroundColor" red="0.93507207979999996" green="0.45942292130000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <rect key="frame" x="8" y="42" width="173" height="117"/>
+                                <color key="backgroundColor" red="1" green="0.50196081400000003" blue="0.0" alpha="0.7646551724137931" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="Didot" family="Didot" pointSize="24"/>
-                                <inset key="contentEdgeInsets" minX="4" minY="19" maxX="0.0" maxY="5"/>
+                                <inset key="contentEdgeInsets" minX="0.0" minY="0.0" maxX="0.0" maxY="5"/>
                                 <state key="normal" title="Energetic">
-                                    <color key="titleColor" red="1" green="0.96475116563351238" blue="0.47946894669455187" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleColor" red="0.1215686275" green="0.12941176469999999" blue="0.14117647059999999" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="moodButton:" destination="tAo-Rd-pcq" eventType="touchUpInside" id="GVU-73-IBA"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Sad" translatesAutoresizingMaskIntoConstraints="NO" id="itB-0o-lSl">
-                                <rect key="frame" x="55" y="27" width="80" height="80"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Energetic" translatesAutoresizingMaskIntoConstraints="NO" id="Vvj-fw-29C">
+                                <rect key="frame" x="55" y="52" width="72" height="72"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jr3-uB-ml5">
-                                <rect key="frame" x="92" y="281" width="210" height="21"/>
+                            <button opaque="NO" tag="4" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LSs-7L-3CX">
+                                <rect key="frame" x="193" y="167" width="173" height="117"/>
+                                <color key="backgroundColor" red="0.60000002379999995" green="0.60000002379999995" blue="0.60000002379999995" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="Didot" family="Didot" pointSize="24"/>
+                                <inset key="contentEdgeInsets" minX="0.0" minY="0.0" maxX="0.0" maxY="5"/>
+                                <state key="normal" title="Sad">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="moodButton:" destination="tAo-Rd-pcq" eventType="touchUpInside" id="PYc-P0-gcu"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Sad" translatesAutoresizingMaskIntoConstraints="NO" id="RDO-O1-odw">
+                                <rect key="frame" x="243" y="177" width="72" height="72"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Enable your motion detector" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H6Q-b1-DXu">
+                                <rect key="frame" x="17" y="300" width="358" height="31"/>
+                                <fontDescription key="fontDescription" name="Didot" family="Didot" pointSize="27"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Desired Mood" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FF5-Rw-uY2">
+                                <rect key="frame" x="8" y="0.0" width="358" height="34"/>
+                                <fontDescription key="fontDescription" name="Didot" family="Didot" pointSize="27"/>
+                                <color key="textColor" red="0.063741987179487203" green="0.037477429284050866" blue="0.063351692219759406" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Your motion capture" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lls-JA-rdy">
+                                <rect key="frame" x="13" y="446" width="349" height="28"/>
+                                <fontDescription key="fontDescription" name="Didot" family="Didot" pointSize="25"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="x :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sRE-zY-hOI">
+                                <rect key="frame" x="20" y="487" width="18" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="y :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wmK-l6-Gjm">
+                                <rect key="frame" x="139" y="487" width="22" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="z :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SkE-wY-Ot4">
+                                <rect key="frame" x="261" y="487" width="19" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uai-YK-zHt">
+                                <rect key="frame" x="243" y="349" width="70" height="69"/>
+                                <state key="normal" image="Off"/>
+                                <connections>
+                                    <action selector="stopDetector:" destination="tAo-Rd-pcq" eventType="touchUpInside" id="V3l-W1-WG8"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -239,7 +289,6 @@
                         <outlet property="getResultX" destination="U2O-Fu-Z5q" id="XVJ-JN-2ef"/>
                         <outlet property="getResultY" destination="80i-MQ-zxd" id="27E-qL-jmi"/>
                         <outlet property="getResultZ" destination="UPe-Tg-vDj" id="Sfq-g0-7uk"/>
-                        <outlet property="happyShow" destination="jr3-uB-ml5" id="DYd-pW-cEz"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="32K-aC-MXp" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -258,44 +307,60 @@
                         <rect key="frame" x="0.0" y="64" width="375" height="554"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xni-Ir-B1e">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xni-Ir-B1e">
+                                <rect key="frame" x="0.0" y="0.0" width="359" height="667"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="accelerometer" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i8d-lf-b6K">
-                                        <rect key="frame" x="16" y="20" width="111" height="21"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O8y-SK-caC">
+                                        <rect key="frame" x="0.0" y="0.0" width="376" height="554"/>
+                                        <color key="backgroundColor" red="0.75686274509803919" green="0.75686274509803919" blue="0.75686274509803919" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6p3-WX-9Bk" customClass="GraphView" customModule="project" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="49" width="379" height="112"/>
-                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="112" id="r2L-y4-Jcb"/>
-                                            <constraint firstAttribute="width" constant="383" id="rYF-90-6A2"/>
-                                        </constraints>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Crowd Motion" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i8d-lf-b6K">
+                                        <rect key="frame" x="101" y="11" width="157" height="30"/>
+                                        <fontDescription key="fontDescription" name="Didot" family="Didot" pointSize="24"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6p3-WX-9Bk" customClass="GraphView" customModule="project" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="49" width="383" height="112"/>
+                                        <color key="backgroundColor" red="0.40000000600000002" green="0.40000000600000002" blue="0.40000000600000002" alpha="0.86947737068965514" colorSpace="calibratedRGB"/>
+                                    </view>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Crowd Desire" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kze-Aa-iAD">
+                                        <rect key="frame" x="95" y="169" width="169" height="30"/>
+                                        <fontDescription key="fontDescription" name="Didot" family="Didot" pointSize="24"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ktu-OF-6s6" customClass="PieChartView" customModule="Charts">
+                                        <rect key="frame" x="28" y="202" width="323" height="303"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     </view>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstItem="6p3-WX-9Bk" firstAttribute="top" secondItem="i8d-lf-b6K" secondAttribute="bottom" constant="8" id="5fP-aV-nXM"/>
-                                    <constraint firstItem="6p3-WX-9Bk" firstAttribute="leading" secondItem="xni-Ir-B1e" secondAttribute="leadingMargin" constant="-20" id="lW2-zd-74C"/>
-                                    <constraint firstItem="i8d-lf-b6K" firstAttribute="top" secondItem="xni-Ir-B1e" secondAttribute="top" constant="20" id="nNY-dN-lxn"/>
-                                    <constraint firstAttribute="leadingMargin" secondItem="i8d-lf-b6K" secondAttribute="leading" id="pLP-D0-A3E"/>
-                                    <constraint firstAttribute="trailingMargin" secondItem="6p3-WX-9Bk" secondAttribute="trailing" constant="-20" id="pxZ-fb-UPo"/>
+                                    <constraint firstAttribute="bottom" secondItem="6p3-WX-9Bk" secondAttribute="bottom" constant="506" id="Izu-Qk-zOi"/>
+                                    <constraint firstItem="i8d-lf-b6K" firstAttribute="centerX" secondItem="xni-Ir-B1e" secondAttribute="centerX" id="MEX-aR-vlC"/>
+                                    <constraint firstItem="i8d-lf-b6K" firstAttribute="top" secondItem="xni-Ir-B1e" secondAttribute="top" constant="11" id="NDR-Ii-Rk8"/>
+                                    <constraint firstItem="6p3-WX-9Bk" firstAttribute="top" secondItem="i8d-lf-b6K" secondAttribute="bottom" constant="8" symbolic="YES" id="TAi-Vd-612"/>
+                                    <constraint firstAttribute="trailing" secondItem="6p3-WX-9Bk" secondAttribute="trailing" constant="-24" id="s2R-R4-bTc"/>
+                                    <constraint firstItem="6p3-WX-9Bk" firstAttribute="leading" secondItem="xni-Ir-B1e" secondAttribute="leading" id="w5a-Fk-nJc"/>
                                 </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="bottom" secondItem="xni-Ir-B1e" secondAttribute="bottom" constant="-113" id="Th0-Pm-o7y"/>
-                            <constraint firstItem="xni-Ir-B1e" firstAttribute="top" secondItem="oxn-Ar-2dL" secondAttribute="bottom" id="Zg1-Rv-bLJ"/>
-                            <constraint firstItem="xni-Ir-B1e" firstAttribute="leading" secondItem="yFH-AP-xIj" secondAttribute="leading" id="cPc-Bs-3vW"/>
+                            <constraint firstItem="xni-Ir-B1e" firstAttribute="leading" secondItem="yFH-AP-xIj" secondAttribute="leading" id="9Kv-ah-RFw"/>
+                            <constraint firstAttribute="bottom" secondItem="xni-Ir-B1e" secondAttribute="bottom" constant="-113" id="C2v-M7-1KI"/>
+                            <constraint firstItem="xni-Ir-B1e" firstAttribute="top" secondItem="oxn-Ar-2dL" secondAttribute="bottom" id="Zhi-w7-prt"/>
+                            <constraint firstItem="xni-Ir-B1e" firstAttribute="trailing" secondItem="yFH-AP-xIj" secondAttribute="trailingMargin" id="l3h-KZ-CDh"/>
                         </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="graphView" destination="6p3-WX-9Bk" id="whR-Us-scg"/>
+                        <outlet property="pieChartView" destination="ktu-OF-6s6" id="4WB-3p-Ep7"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JL8-gU-Afd" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -309,6 +374,8 @@
         <image name="DJ image" width="454" height="1080"/>
         <image name="Energetic" width="100" height="100"/>
         <image name="Happy" width="100" height="100"/>
+        <image name="Off" width="104" height="104"/>
+        <image name="Run" width="100" height="100"/>
         <image name="Sad" width="100" height="100"/>
     </resources>
 </document>

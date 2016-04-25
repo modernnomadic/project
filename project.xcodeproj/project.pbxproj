@@ -89,7 +89,6 @@
 			children = (
 				7E51E6861CC596F300BD020B /* project */,
 				7E96EF551CCBC01900B13B5F /* MainView */,
-				7E96EF541CCBBFEB00B13B5F /* Controller */,
 				7E96EF5B1CCBC49000B13B5F /* Constants */,
 				7E96EF581CCBC46E00B13B5F /* Data */,
 				7E51E69B1CC596F300BD020B /* projectTests */,
@@ -114,8 +113,8 @@
 			children = (
 				7E51E6871CC596F300BD020B /* AppDelegate.swift */,
 				7E51E68B1CC596F300BD020B /* Main.storyboard */,
-				7E51E68E1CC596F300BD020B /* Assets.xcassets */,
 				7E51E6901CC596F300BD020B /* LaunchScreen.storyboard */,
+				7E51E68E1CC596F300BD020B /* Assets.xcassets */,
 				7E51E6931CC596F300BD020B /* Info.plist */,
 			);
 			path = project;
@@ -130,19 +129,11 @@
 			path = projectTests;
 			sourceTree = "<group>";
 		};
-		7E96EF541CCBBFEB00B13B5F /* Controller */ = {
-			isa = PBXGroup;
-			children = (
-				7EB2EFB81CCD3E6A00320CB6 /* GraphView.swift */,
-				7E96EF511CCBBF4F00B13B5F /* CrowdController.swift */,
-			);
-			path = Controller;
-			sourceTree = SOURCE_ROOT;
-		};
 		7E96EF551CCBC01900B13B5F /* MainView */ = {
 			isa = PBXGroup;
 			children = (
 				7E51E6891CC596F300BD020B /* ViewController.swift */,
+				7E96EF511CCBBF4F00B13B5F /* CrowdController.swift */,
 			);
 			path = MainView;
 			sourceTree = "<group>";
@@ -166,6 +157,7 @@
 		7E96EF5E1CCBC76000B13B5F /* Supported */ = {
 			isa = PBXGroup;
 			children = (
+				7EB2EFB81CCD3E6A00320CB6 /* GraphView.swift */,
 				7E96EF5F1CCBC76000B13B5F /* MotionKit.swift */,
 			);
 			name = Supported;
