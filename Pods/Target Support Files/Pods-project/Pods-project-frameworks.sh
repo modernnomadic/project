@@ -86,8 +86,12 @@ strip_invalid_archs() {
 if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "Pods-project/Charts.framework"
   install_framework "Pods-project/Firebase.framework"
+  install_framework "Pods-project/JSQMessagesViewController.framework"
+  install_framework "Pods-project/JSQSystemSoundPlayer.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "Pods-project/Charts.framework"
   install_framework "Pods-project/Firebase.framework"
+  install_framework "Pods-project/JSQMessagesViewController.framework"
+  install_framework "Pods-project/JSQSystemSoundPlayer.framework"
 fi

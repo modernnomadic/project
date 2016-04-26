@@ -174,6 +174,7 @@ class CrowdController: UIViewController {
             }
         })
     }
+      
     /*@IBOutlet weak var happyShow: UILabel!
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)

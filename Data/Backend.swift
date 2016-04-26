@@ -8,7 +8,12 @@ class Backend {
     private var _BASE_REF = Firebase(url: "\(BASE_URL)")
     private var _motionValues_REF = Firebase(url: "\(BASE_URL)/valuesParent")
     private var _moodValues_REF = Firebase(url: "\(BASE_URL)/moodValue")
-
+    private var _chat_REF = Firebase(url: "\(BASE_URL)/chat")
+    
+    
+    var CHAT_REF: Firebase{
+        return _chat_REF
+    }
     
     var BASE_REF: Firebase {
         return _BASE_REF

@@ -6,6 +6,7 @@ target 'project' do
 
 pod 'Firebase', '>= 2.5.1’
 pod 'Charts'
+pod 'JSQMessagesViewController'
 
 end
 

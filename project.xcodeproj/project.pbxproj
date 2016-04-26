@@ -13,6 +13,8 @@
 		7E51E68F1CC596F300BD020B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7E51E68E1CC596F300BD020B /* Assets.xcassets */; };
 		7E51E6921CC596F300BD020B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7E51E6901CC596F300BD020B /* LaunchScreen.storyboard */; };
 		7E51E69D1CC596F300BD020B /* projectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E51E69C1CC596F300BD020B /* projectTests.swift */; };
+		7E73ED841CCEBAAC00B3478A /* LoginForChat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E73ED831CCEBAAC00B3478A /* LoginForChat.swift */; };
+		7E73ED861CCEC2CD00B3478A /* ControllerForChat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E73ED851CCEC2CD00B3478A /* ControllerForChat.swift */; };
 		7E96EF521CCBBF4F00B13B5F /* CrowdController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E96EF511CCBBF4F00B13B5F /* CrowdController.swift */; };
 		7E96EF5A1CCBC46E00B13B5F /* Backend.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E96EF591CCBC46E00B13B5F /* Backend.swift */; };
 		7E96EF5D1CCBC49D00B13B5F /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E96EF5C1CCBC49D00B13B5F /* Constants.swift */; };
@@ -47,6 +49,8 @@
 		7E51E6981CC596F300BD020B /* projectTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = projectTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7E51E69C1CC596F300BD020B /* projectTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = projectTests.swift; sourceTree = "<group>"; };
 		7E51E69E1CC596F300BD020B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7E73ED831CCEBAAC00B3478A /* LoginForChat.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginForChat.swift; path = ../LoginForChat.swift; sourceTree = "<group>"; };
+		7E73ED851CCEC2CD00B3478A /* ControllerForChat.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ControllerForChat.swift; sourceTree = "<group>"; };
 		7E96EF511CCBBF4F00B13B5F /* CrowdController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CrowdController.swift; path = ../project/CrowdController.swift; sourceTree = "<group>"; };
 		7E96EF591CCBC46E00B13B5F /* Backend.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Backend.swift; sourceTree = "<group>"; };
 		7E96EF5C1CCBC49D00B13B5F /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
@@ -132,6 +136,8 @@
 		7E96EF551CCBC01900B13B5F /* MainView */ = {
 			isa = PBXGroup;
 			children = (
+				7E73ED831CCEBAAC00B3478A /* LoginForChat.swift */,
+				7E73ED851CCEC2CD00B3478A /* ControllerForChat.swift */,
 				7E51E6891CC596F300BD020B /* ViewController.swift */,
 				7E96EF511CCBBF4F00B13B5F /* CrowdController.swift */,
 			);
@@ -344,7 +350,9 @@
 				7E51E6881CC596F300BD020B /* AppDelegate.swift in Sources */,
 				7E96EF601CCBC76000B13B5F /* MotionKit.swift in Sources */,
 				7E96EF521CCBBF4F00B13B5F /* CrowdController.swift in Sources */,
+				7E73ED841CCEBAAC00B3478A /* LoginForChat.swift in Sources */,
 				7E96EF5D1CCBC49D00B13B5F /* Constants.swift in Sources */,
+				7E73ED861CCEC2CD00B3478A /* ControllerForChat.swift in Sources */,
 				7EB2EFBB1CCD3E6A00320CB6 /* GraphView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
