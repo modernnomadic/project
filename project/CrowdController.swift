@@ -5,11 +5,17 @@
 //  Created by Undraa Khurtsbilegt on 18/04/2016.
 //  Copyright © 2016 Amarbayasgalan Batbaatar. All rights reserved.
 //
+//This is the View controller for Crowd interface. From this CrowdController class all the datas that a users generate will be stored to Firebase backend. From there other classes will be able to retrieve the data by calling their unique paths.
+//The interface consists of 2 main properties.
+//1. Desired Mood that gets the desired mood from the users by tapping the desired mood (Happy, Sad, Calm and Energetic). As user can desire only one mood at a time I have created a unique algorithm that sends only the current desire. When a user wants to desire other mood it then automatically sends the signal to the backend saying disregard the previous mood and set it to new mood.
+//2. Motion Detector which activates the collecting of user accelerometer data when pressed Run(mobile phone shaking icon). It can then be stopped by pressing the Off(Zzz sleeping icon). Also it shows your accelerometer values - I included this with a tought that user might want to see the motion they create.
+//  2.1 Motion Detector uses MotionKit wrapper to collect the accelerometer data easily. MotionKit is located in the Supported folder.
 
 import UIKit
 import Foundation
 import Firebase
 
+//creating Mood group and assigning them a identifier
 enum Mood : Int32 {
     case Energetic = 1
     case Happy = 2
@@ -23,16 +29,13 @@ class CrowdController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-         // Do any additional setup after loading the view, typically from a nib.
       
     }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
-    
+
     @IBOutlet weak var getResultX: UILabel!
     
     @IBOutlet weak var getResultY: UILabel!
@@ -42,6 +45,9 @@ class CrowdController: UIViewController {
     let motionKit = MotionKit()
     let backendCrowd = Backend()
     
+    // this function invokeDetector is activated when the user presses Run(mobile phone shaking icon). It then initialises MotionKit - allowing me to get the accelerometer value by calling getAccelerometerValues(your-desired-interval).
+    // also, as this app will be used on multiple devices at the same time, I have developed a code to assign a unique key for each individual device that are sending accelerometer value. This is essential because we don't want each devices to overwrite each other's transmitting data.
+
     @IBAction func invokeDetector(sender: UIButton) {
         
         
@@ -49,23 +55,20 @@ class CrowdController: UIViewController {
         {
             (x, y, z) in
 
-            print(x)
-            print(y)
-            print(z)
-            
             dispatch_async(dispatch_get_main_queue(), {
                 self.getResultX.text = "\(x)"
                 self.getResultY.text = "\(y)"
                 self.getResultZ.text = "\(z)"
                 
             })
-            
+            //creating a unique identifier for each individual device.
             var uniqueIdentifier: String
             let userDefaults = NSUserDefaults.standardUserDefaults()
-            
+            //identifies teh current device and set their identifier key
             if let identifier = userDefaults.stringForKey("identifier") {
                 uniqueIdentifier = identifier
             }
+            //if its a new device connecting, create a new key for them and store the detail in the Firebase backend
             else {
                 uniqueIdentifier = self.backendCrowd.motionValues_REF.childByAutoId().key
                 
@@ -80,17 +83,15 @@ class CrowdController: UIViewController {
             
             values_REF.updateChildValues(valuesList1)
             
-            
-            //Interval is in seconds. And now you have got the x, y and z values her
        }
         
     }
-    
+    //When user presses Off(Zzz sleeping icon), stops the updates from the MotionKit to retrieve accelerometer values.
     @IBAction func stopDetector(sender: UIButton) {
         motionKit.stopAccelerometerUpdates()
         
     }
-
+    //function that gets the total current mood value from the Firebase backend which the users
     func getCurValueFromFirebaseValue(firbaseVal: FDataSnapshot?, countPath: String) -> Int32 {
         var res : Int32 = 0
         if (nil != firbaseVal) {
@@ -104,6 +105,7 @@ class CrowdController: UIViewController {
         }
         return res
     }
+    //function 'change' is an algorithm that when user enter new desired mood, it increases the desired moood by 1 and decreases the previous mood by -1
     func change(countPath: String, increase: Bool) {
         let countPath_REF = self.backendCrowd.moodValues_REF.childByAppendingPath("count")
         countPath_REF.observeSingleEventOfType(.Value, withBlock: { (prevCountValObj) in
@@ -113,7 +115,8 @@ class CrowdController: UIViewController {
             countPath_REF.updateChildValues([countPath: newCountVal])
         })
     }
-
+    // function that controls mood buttons on the CrowdController interface. All 4 button is connected to this single button action. It then filters which button is pressed through enum Mood that we created earlier by receiving their identifier. As same with the function invokeDetector, It also uniquely filters each devices state of the mood.
+    
     @IBAction func moodButton(sender: UIButton) {
         var uniqueIdentifier: String
         let userDefaults = NSUserDefaults.standardUserDefaults()
@@ -127,7 +130,7 @@ class CrowdController: UIViewController {
             userDefaults.setValue(uniqueIdentifier, forKey: "identifier")
             userDefaults.synchronize()
         }
-        
+        //giving unique identity to particilar device and setting their state of the mood.
         let moodValue :Mood = Mood(rawValue: Int32(sender.tag))!
         let path = "moodValue" + "/\(uniqueIdentifier)"
         let moodValues_REF = self.backendCrowd.moodValues_REF.childByAppendingPath(path)
@@ -140,13 +143,13 @@ class CrowdController: UIViewController {
                     prevValue = myPrevValueDic!["moodValue"] as! NSNumber
                 }
             }
-
+            // changing the state of the moods.
             let newMoodValNum : NSNumber = NSNumber(int: moodValue.rawValue)
             moodValues_REF.updateChildValues(["moodValue": newMoodValNum])
             if (prevValue != newMoodValNum) {
-                // value was updated
-                // here we should updated count
-               
+                
+                // value was updated.
+             
                 if (prevValue.intValue == Mood.Happy.rawValue) {
                     self.change("countHappy", increase: false)
                 }
@@ -174,17 +177,4 @@ class CrowdController: UIViewController {
             }
         })
     }
-      
-    /*@IBOutlet weak var happyShow: UILabel!
-    override func viewWillAppear(animated: Bool) {
-        super.viewWillAppear(animated)
-        let countPath_REF = self.backendCrowd.moodValues_REF.childByAppendingPath("count")
-        countPath_REF.observeEventType(.Value, withBlock: { (prevCountValObj) in
-            let cntHappy: Int32 = self.getCurValueFromFirebaseValue(prevCountValObj, countPath: "countHappy")
-            let cntSad: Int32 = self.getCurValueFromFirebaseValue(prevCountValObj, countPath: "countSad")
-            let cntEnergetic: Int32 = self.getCurValueFromFirebaseValue(prevCountValObj, countPath: "countEnergetic")
-            let cntCalm: Int32 = self.getCurValueFromFirebaseValue(prevCountValObj, countPath: "countCalm")
-            self.happyShow.text = NSString(format: "H: %d S: %d E: %d c: %d", cntHappy, cntSad, cntEnergetic, cntCalm) as String
-        })
-    }*/
 }

@@ -13,17 +13,17 @@
 		7E51E68F1CC596F300BD020B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7E51E68E1CC596F300BD020B /* Assets.xcassets */; };
 		7E51E6921CC596F300BD020B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7E51E6901CC596F300BD020B /* LaunchScreen.storyboard */; };
 		7E51E69D1CC596F300BD020B /* projectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E51E69C1CC596F300BD020B /* projectTests.swift */; };
-		7E73ED841CCEBAAC00B3478A /* LoginForChat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E73ED831CCEBAAC00B3478A /* LoginForChat.swift */; };
-		7E73ED861CCEC2CD00B3478A /* ControllerForChat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E73ED851CCEC2CD00B3478A /* ControllerForChat.swift */; };
+		7E73ED931CCFCE6700B3478A /* ControllerForChat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E73ED921CCFCE6700B3478A /* ControllerForChat.swift */; };
+		7E73ED951CCFCE6E00B3478A /* LoginForChat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E73ED941CCFCE6E00B3478A /* LoginForChat.swift */; };
+		7E73ED971CCFCE9700B3478A /* MotionKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E73ED961CCFCE9700B3478A /* MotionKit.swift */; };
+		7E73ED991CCFCE9D00B3478A /* GraphView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E73ED981CCFCE9D00B3478A /* GraphView.swift */; };
 		7E96EF521CCBBF4F00B13B5F /* CrowdController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E96EF511CCBBF4F00B13B5F /* CrowdController.swift */; };
 		7E96EF5A1CCBC46E00B13B5F /* Backend.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E96EF591CCBC46E00B13B5F /* Backend.swift */; };
 		7E96EF5D1CCBC49D00B13B5F /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E96EF5C1CCBC49D00B13B5F /* Constants.swift */; };
-		7E96EF601CCBC76000B13B5F /* MotionKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E96EF5F1CCBC76000B13B5F /* MotionKit.swift */; };
 		7EB2EFA51CCD067700320CB6 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7EB2EFA41CCD067700320CB6 /* QuartzCore.framework */; };
 		7EB2EFA71CCD069700320CB6 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7EB2EFA61CCD069700320CB6 /* CoreGraphics.framework */; };
 		7EB2EFA91CCD06AC00320CB6 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7EB2EFA81CCD06AC00320CB6 /* UIKit.framework */; };
 		7EB2EFAB1CCD06C300320CB6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7EB2EFAA1CCD06C300320CB6 /* Foundation.framework */; };
-		7EB2EFBB1CCD3E6A00320CB6 /* GraphView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EB2EFB81CCD3E6A00320CB6 /* GraphView.swift */; };
 		EDCCF3C591985DA30AF8A20A /* Pods_project.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 85317DFDB23BF0A46EB8348E /* Pods_project.framework */; };
 /* End PBXBuildFile section */
 
@@ -49,18 +49,19 @@
 		7E51E6981CC596F300BD020B /* projectTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = projectTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7E51E69C1CC596F300BD020B /* projectTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = projectTests.swift; sourceTree = "<group>"; };
 		7E51E69E1CC596F300BD020B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		7E73ED831CCEBAAC00B3478A /* LoginForChat.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginForChat.swift; path = ../LoginForChat.swift; sourceTree = "<group>"; };
-		7E73ED851CCEC2CD00B3478A /* ControllerForChat.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ControllerForChat.swift; sourceTree = "<group>"; };
+		7E73ED911CCFCDE700B3478A /* Readme.rtf */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; path = Readme.rtf; sourceTree = "<group>"; };
+		7E73ED921CCFCE6700B3478A /* ControllerForChat.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ControllerForChat.swift; path = Chat/ControllerForChat.swift; sourceTree = SOURCE_ROOT; };
+		7E73ED941CCFCE6E00B3478A /* LoginForChat.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginForChat.swift; path = Chat/LoginForChat.swift; sourceTree = SOURCE_ROOT; };
+		7E73ED961CCFCE9700B3478A /* MotionKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MotionKit.swift; path = Supported/MotionKit.swift; sourceTree = SOURCE_ROOT; };
+		7E73ED981CCFCE9D00B3478A /* GraphView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GraphView.swift; path = Supported/GraphView.swift; sourceTree = SOURCE_ROOT; };
 		7E96EF511CCBBF4F00B13B5F /* CrowdController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CrowdController.swift; path = ../project/CrowdController.swift; sourceTree = "<group>"; };
 		7E96EF591CCBC46E00B13B5F /* Backend.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Backend.swift; sourceTree = "<group>"; };
 		7E96EF5C1CCBC49D00B13B5F /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
-		7E96EF5F1CCBC76000B13B5F /* MotionKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MotionKit.swift; sourceTree = "<group>"; };
 		7EB2EFA41CCD067700320CB6 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		7EB2EFA61CCD069700320CB6 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		7EB2EFA81CCD06AC00320CB6 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		7EB2EFAA1CCD06C300320CB6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		7EB2EFB41CCD2B4500320CB6 /* Firebase.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Firebase.framework; path = "../../../Library/Developer/Xcode/DerivedData/project-dadrhledofebtqgsxkludzfxkevi/Build/Products/Debug-iphonesimulator/Firebase.framework"; sourceTree = "<group>"; };
-		7EB2EFB81CCD3E6A00320CB6 /* GraphView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GraphView.swift; sourceTree = SOURCE_ROOT; };
 		85317DFDB23BF0A46EB8348E /* Pods_project.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_project.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F8C28F67252C7B46A9945EB /* Pods-project.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-project.debug.xcconfig"; path = "Pods/Target Support Files/Pods-project/Pods-project.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -91,6 +92,7 @@
 		7E51E67B1CC596F300BD020B = {
 			isa = PBXGroup;
 			children = (
+				7E73ED911CCFCDE700B3478A /* Readme.rtf */,
 				7E51E6861CC596F300BD020B /* project */,
 				7E96EF551CCBC01900B13B5F /* MainView */,
 				7E96EF5B1CCBC49000B13B5F /* Constants */,
@@ -133,13 +135,22 @@
 			path = projectTests;
 			sourceTree = "<group>";
 		};
+		7E73ED8A1CCFC83000B3478A /* Chat */ = {
+			isa = PBXGroup;
+			children = (
+				7E73ED921CCFCE6700B3478A /* ControllerForChat.swift */,
+				7E73ED941CCFCE6E00B3478A /* LoginForChat.swift */,
+			);
+			name = Chat;
+			path = "untitled folder";
+			sourceTree = SOURCE_ROOT;
+		};
 		7E96EF551CCBC01900B13B5F /* MainView */ = {
 			isa = PBXGroup;
 			children = (
-				7E73ED831CCEBAAC00B3478A /* LoginForChat.swift */,
-				7E73ED851CCEC2CD00B3478A /* ControllerForChat.swift */,
 				7E51E6891CC596F300BD020B /* ViewController.swift */,
 				7E96EF511CCBBF4F00B13B5F /* CrowdController.swift */,
+				7E73ED8A1CCFC83000B3478A /* Chat */,
 			);
 			path = MainView;
 			sourceTree = "<group>";
@@ -163,8 +174,8 @@
 		7E96EF5E1CCBC76000B13B5F /* Supported */ = {
 			isa = PBXGroup;
 			children = (
-				7EB2EFB81CCD3E6A00320CB6 /* GraphView.swift */,
-				7E96EF5F1CCBC76000B13B5F /* MotionKit.swift */,
+				7E73ED981CCFCE9D00B3478A /* GraphView.swift */,
+				7E73ED961CCFCE9700B3478A /* MotionKit.swift */,
 			);
 			name = Supported;
 			path = Additional;
@@ -348,12 +359,12 @@
 				7E51E68A1CC596F300BD020B /* ViewController.swift in Sources */,
 				7E96EF5A1CCBC46E00B13B5F /* Backend.swift in Sources */,
 				7E51E6881CC596F300BD020B /* AppDelegate.swift in Sources */,
-				7E96EF601CCBC76000B13B5F /* MotionKit.swift in Sources */,
+				7E73ED991CCFCE9D00B3478A /* GraphView.swift in Sources */,
 				7E96EF521CCBBF4F00B13B5F /* CrowdController.swift in Sources */,
-				7E73ED841CCEBAAC00B3478A /* LoginForChat.swift in Sources */,
+				7E73ED971CCFCE9700B3478A /* MotionKit.swift in Sources */,
+				7E73ED931CCFCE6700B3478A /* ControllerForChat.swift in Sources */,
+				7E73ED951CCFCE6E00B3478A /* LoginForChat.swift in Sources */,
 				7E96EF5D1CCBC49D00B13B5F /* Constants.swift in Sources */,
-				7E73ED861CCEC2CD00B3478A /* ControllerForChat.swift in Sources */,
-				7EB2EFBB1CCD3E6A00320CB6 /* GraphView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

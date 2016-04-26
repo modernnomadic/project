@@ -1,16 +1,13 @@
 //
 //  GraphView.swift
-//  MotionGraphSwift
 //
 //  Created by Kent Liau on 9/4/15.
 //  Copyright © 2015 Kent Liau. All rights reserved.
 //
+//  GraphView utilizes QuartzCore framework and it is adapted from the https://github.com/kentliau/MotionGraphSwift
 
 import UIKit
 import QuartzCore
-
-// MARK:- APLGraphView
-
 /*
 GraphView handles the public interface as well as arranging the subviews and sublayers to produce the intended effect.
 */
@@ -104,9 +101,6 @@ class GraphView : UIView {
     }
     
 }
-
-
-// MARK:- GraphViewSegment
 
 /*
 The GraphViewSegment manages up to 32 values and a CALayer that it updates with the segment of the graph that those values represent.
@@ -219,10 +213,6 @@ class GraphViewSegment : NSObject {
 
 }
 
-
-
-// MARK:- GraphTextView
-
 /*
 We use a separate view to draw the text for the graph so that we can layer the segment layers below it which gives the illusion that the numbers are draw over the graph, and hides the fact that the graph drawing for each segment is incomplete until the segment is filled.
 */
@@ -260,9 +250,6 @@ class GraphTextView : UIView {
     }
     
 }
-
-
-// MARK: - Quartz Helper
 
 // Functions used to draw all content.
 func CreateDeviceGrayColor(w: CGFloat, a: CGFloat) -> CGColorRef {

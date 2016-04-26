@@ -1,3 +1,4 @@
+//This is where the Firebase backend pathways are defined
 
 import Foundation
 import Firebase
@@ -10,10 +11,7 @@ class Backend {
     private var _moodValues_REF = Firebase(url: "\(BASE_URL)/moodValue")
     private var _chat_REF = Firebase(url: "\(BASE_URL)/chat")
     
-    
-    var CHAT_REF: Firebase{
-        return _chat_REF
-    }
+   
     
     var BASE_REF: Firebase {
         return _BASE_REF
@@ -25,6 +23,9 @@ class Backend {
     var moodValues_REF: Firebase {
         
         return _moodValues_REF
+    }
+    var CHAT_REF: Firebase{
+        return _chat_REF
     }
     
 }

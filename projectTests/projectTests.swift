@@ -4,7 +4,9 @@
 //
 //  Created by Undraa Khurtsbilegt on 18/04/2016.
 //  Copyright © 2016 Amarbayasgalan Batbaatar. All rights reserved.
-//
+
+
+//  Default test for iOS apps.
 
 import XCTest
 @testable import project

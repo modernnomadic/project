@@ -96,6 +96,7 @@
    </AnalyzeAction>
    <ArchiveAction
       buildConfiguration = "Release"
+      customArchiveName = "MCDJ"
       revealArchiveInOrganizer = "YES">
    </ArchiveAction>
 </Scheme>

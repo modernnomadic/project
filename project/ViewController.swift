@@ -2,13 +2,17 @@
 //  ViewController.swift
 //  project
 //
-//  Created by Undraa Khurtsbilegt on 18/04/2016.
 //  Copyright © 2016 Amarbayasgalan Batbaatar. All rights reserved.
 //
+//This is the view controller for DJ interface. It retrieves the data from Firebase backend which the CrowdController has put in and shows the received data through pie chart(Crowd Desire) and motion graph(Crow Motion).
+
+//For the piechart (setChart) I modified a tutorial at http://www.appcoda.com/ios-charts-api-tutorial/ to able to receive the incoming data from the Firebase backend
+//For the motion graph I adapted and modified https://github.com/kentliau/MotionGraphSwift to push only the accelerometer method. It is located in Supported folder under Graphview.
 
 import UIKit
 import Firebase
 import Charts
+
 
 class ViewController: UIViewController {
     
@@ -18,7 +22,8 @@ class ViewController: UIViewController {
     @IBOutlet weak var graphView: GraphView!
     
     let backendGraph = Backend()
- 
+    
+    // function that gets the total current mood value from the Firebase backend which the users has inputed in CrowdController
     func getCurValueFromFirebaseValue(firbaseVal: FDataSnapshot?, countPath: String) -> Int32 {
         var res : Int32 = 0
         if (nil != firbaseVal) {
@@ -32,6 +37,7 @@ class ViewController: UIViewController {
         }
         return res
     }
+    // function that gets the value from above function getCurValueFromFirebaseValue and sends the data to setChart
     override func viewDidLoad() {
         super.viewDidLoad()
        
@@ -41,14 +47,14 @@ class ViewController: UIViewController {
             let cntSad: Int32 = self.getCurValueFromFirebaseValue(prevCountValObj, countPath: "countSad")
             let cntEnergetic: Int32 = self.getCurValueFromFirebaseValue(prevCountValObj, countPath: "countEnergetic")
             let cntCalm: Int32 = self.getCurValueFromFirebaseValue(prevCountValObj, countPath: "countCalm")
-           
-        
-            let months = ["Happy", "Sad", "Energetic", "Calm"]
-            let unitsSold = [Double(cntHappy), Double(cntSad), Double(cntEnergetic), Double(cntCalm)]
-            self.setChart(months, values: unitsSold)
+            
+            let moodState = ["Happy", "Sad", "Energetic", "Calm"]
+            let givenMood = [Double(cntHappy), Double(cntSad), Double(cntEnergetic), Double(cntCalm)]
+            self.setChart(moodState, values: givenMood)
             
         })
     }
+    //this function setChart builds the structure of the pie chart using Charts framework
     func setChart(givenPoints: [String], values: [Double]) {
         pieChartView.noDataText = "Crowd hasn't chosen their desired moot yet :)"
     
@@ -78,7 +84,7 @@ class ViewController: UIViewController {
         pieChartDataSet.colors = colors
         
     }
-
+    //this function receives all the motion data collected from the users in the Firebase backend and gets the average to display in the motion graph and finally pushes the data processed to the GraphView where the motion graph is built
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
         assert(nil != self.graphView)
@@ -121,4 +127,4 @@ class ViewController: UIViewController {
             })
     }
 
-} //*/
+}

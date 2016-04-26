@@ -4,7 +4,8 @@
 //
 //  Created by Undraa Khurtsbilegt on 18/04/2016.
 //  Copyright © 2016 Amarbayasgalan Batbaatar. All rights reserved.
-//
+
+//This the default AppDelage for creating iOS apps. No modifying will be done here.
 
 import UIKit
 import CoreMotion

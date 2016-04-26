@@ -1,7 +1,9 @@
+//This piece of code uses MotionKit wrapper https://github.com/MHaroonBaig/MotionKit
+//MotionKit wrapper which utilizes CoreMotion framework was modified to be able to get only the accelerometer value.
+
 import Foundation
 import CoreMotion
 
-// this retrieve values from the sensors.
 @objc protocol MotionKitDelegate {
     optional  func retrieveAccelerometerValues (x: Double, y:Double, z:Double, absoluteValue: Double)
 }
